@@ -1,0 +1,17 @@
+local Window = Library.CreateLib("Punch Ball", "Midnight")
+local Tab = Window:MainTab("Maki Hub")
+local Section = MainTab:NewSection("PunchBall")
+local Button = MainTab:CreateButton({
+   Name = "Auto Punch",
+   Callback = function()
+      -- Auto Block or Auto Parry Script
+
+local player = game.Players.LocalPlayer
+local humanoid = player.Character:WaitForChild("Humanoid")
+
+-- Function to block or parry
+local function autoBlockOrParry()
+    humanoid:EquipTool(humanoid:FindFirstChildOfClass("Tool"))
+    humanoid:Block(true)
+    humanoid:Parry(true)
+end
